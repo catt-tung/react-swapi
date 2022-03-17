@@ -6,7 +6,6 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <h1>SWAPI</h1>
       <Routes>
         <Route path='/' element={<StarshipPage />} />
         <Route path='/starship' element={<StarshipDetails />} />

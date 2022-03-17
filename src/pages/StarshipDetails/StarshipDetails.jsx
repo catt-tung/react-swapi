@@ -13,13 +13,13 @@ const StarshipDetails = () => {
 
   return ( 
     <>
+    <div className='top-bar'><h1>Star Wars Starships</h1></div>
     <div>
-    <h1>Starwars Starships</h1>
       {StarshipDetails.name ?
-        <div>
+        <div className='starship-card'>
           <h3>Name: {starshipDetails.name}</h3>
           <h3>Model: {starshipDetails.model}</h3>
-          <a href="/"><h3>Return</h3></a>
+          <a id="return" href="/"><h3>RETURN</h3></a>
         </div>
         :
         <>

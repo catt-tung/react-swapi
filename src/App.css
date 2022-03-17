@@ -2,4 +2,45 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 20px;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#name {
+  color: white;
+  text-decoration: none;
+  height: 100px;
+  width: 200px;
+  background-color: darkslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.starship-card {
+  background-color: darkslategray;
+  height: 200px;
+  width: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 30px;
+}
+
+#return {
+  color: white;
+}
+
+h1 {
+  text-align: center;
 }
