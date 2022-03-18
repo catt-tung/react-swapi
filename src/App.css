@@ -28,8 +28,8 @@ body {
 
 .starship-card {
   background-color: darkslategray;
-  height: 200px;
-  width: 400px;
+  height: 320px;
+  width: 450px;
   color: white;
   display: flex;
   flex-direction: column;
