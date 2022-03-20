@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getPilots } from '../../services/sw-api';
+import Pilot from '../../components/Pilot/Pilot';
 
 const PilotList = (props) => {
   const [pilotObject, setPilotObject] = useState([])
@@ -7,11 +8,14 @@ const PilotList = (props) => {
   useEffect(() => {
     getPilots(props.pilotsUrl)
     .then(pilots => setPilotObject(pilots))
-  }, [])
+  }, [props.pilotsUrl])
 
   return ( 
     <>
-      <p>{pilotObject.map(pilot => pilot.name)}</p>
+      {pilotObject.map(pilot => 
+      <p>{pilot.name}</p>
+      )}
+      <Pilot />
     </>
   );
 }

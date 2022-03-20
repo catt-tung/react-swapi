@@ -10,7 +10,7 @@ const StarshipDetails = () => {
   useEffect(()=> {
     getStarshipDetails(location.state.starshipName.url)
     .then(starshipDetails => setStarshipDetails(starshipDetails))
-  })
+  }, [location.state.starshipName.url])
 
   return ( 
     <>

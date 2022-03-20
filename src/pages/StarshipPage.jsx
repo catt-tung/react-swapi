@@ -8,10 +8,10 @@ const StarshipPage = (props) => {
   useEffect(() => {
     getAllStarships()
     .then(starshipData => setStarshipList(starshipData.results))
-  })
+  }, [])
   return ( 
     <>
-      <div className='top-bar'><h1>Star Wars Starships</h1></div>
+      <div><h1>Star Wars Starships</h1></div>
       <div className='container'>
         {starshipList.map((starshipName) => (
           <div><Link id="name" to='/starship' state={{ starshipName }} key={starshipName.name}>{starshipName.name}</Link></div>
