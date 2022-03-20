@@ -16,7 +16,7 @@ const StarshipDetails = () => {
     <>
     <div><h1>Star Wars Starships</h1></div>
     <div>
-      {StarshipDetails.name ?
+      {starshipDetails.name ?
         <div className='starship-card'>
           <h3>Name: {starshipDetails.name}</h3>
           <h3>Model: {starshipDetails.model}</h3>

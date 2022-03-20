@@ -1,9 +1,11 @@
 const Pilot = (props) => {
+  let pilotList = props.pilotObject.map((pilot) => pilot.name)
+  
   return ( 
     <>
-      <p>All the Pilots for this Ship</p>
+      <p>{pilotList.join(', ')}</p>
     </>
-   );
+  );
 }
- 
+
 export default Pilot;

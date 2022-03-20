@@ -11,11 +11,8 @@ const PilotList = (props) => {
   }, [props.pilotsUrl])
 
   return ( 
-    <>
-      {pilotObject.map(pilot => 
-      <p>{pilot.name}</p>
-      )}
-      <Pilot />
+    <> 
+      <Pilot pilotObject={pilotObject} />
     </>
   );
 }
