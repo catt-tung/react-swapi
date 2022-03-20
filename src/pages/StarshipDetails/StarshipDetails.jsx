@@ -20,8 +20,16 @@ const StarshipDetails = () => {
         <div className='starship-card'>
           <h3>Name: {starshipDetails.name}</h3>
           <h3>Model: {starshipDetails.model}</h3>
-          <h3>Pilots:</h3>
-          <PilotList pilotsUrl = {starshipDetails.pilots}/>
+          <div>
+            {starshipDetails.pilots.length ? (
+              <>
+                <h3>Pilots:</h3>
+                <PilotList pilotsUrl = {starshipDetails.pilots} />
+              </>
+            ) : (
+                <h3>There are no pilots for this ship</h3>
+            )}
+          </div>
           <a id="return" href="/"><h3>RETURN</h3></a>
         </div>
         :

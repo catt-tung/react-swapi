@@ -11,12 +11,18 @@ const StarshipPage = (props) => {
   }, [])
   return ( 
     <>
-      <div><h1>Star Wars Starships</h1></div>
-      <div className='container'>
-        {starshipList.map((starshipName) => (
-          <div><Link id="name" to='/starship' state={{ starshipName }} key={starshipName.name}>{starshipName.name}</Link></div>
-        ))}
-      </div>
+      {starshipList.length ? (
+        <>
+          <div><h1>Star Wars Starships</h1></div>
+          <div className='container'>
+            {starshipList.map((starshipName) => (
+              <div><Link id="name" to='/starship' state={{ starshipName }} key={starshipName.name}>{starshipName.name}</Link></div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <h3>Loading Ships!</h3>
+      )}
     </>
   );
 }
